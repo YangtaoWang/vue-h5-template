@@ -7,6 +7,7 @@
 <template>
   <div class="container">
     订单页面
+    <div @click="getCheckCode" data-tracker='{"clickType": "1", "addParams": "aaa"}'>点击</div>
   </div>
 </template>
 <script>
@@ -19,6 +20,9 @@ export default {
   async created () {
   },
   methods: {
+    getCheckCode () {
+      console.log('click')
+    }
   }
 }
 </script>

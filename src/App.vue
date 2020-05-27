@@ -6,8 +6,13 @@
 </template>
 
 <script>
+import Tracker from './util/tracker/tracker.js'
 export default {
-  name: 'App'
+  name: 'App',
+  created () {
+    const tracker = new Tracker()
+    tracker.config({per: 0.9}).install()
+  }
 }
 </script>
 
